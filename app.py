@@ -192,8 +192,15 @@ model = MultiClassSiameseUNet(num_classes=5).to(device)
 model_path = "multiclass_siamese_model.pth" if os.path.exists("multiclass_siamese_model.pth") else "best_siamese_model.pth"
 
 if os.path.exists(model_path):
-    state_dict = torch.load(model_path, map_location=device)
+    state_dict = torch.load(
+        model_path,
+        map_location="cpu",
+        weights_only=True,
+        mmap=True
+    )
     model.load_state_dict(state_dict, strict=False)
+    del state_dict
+
 model.eval()
 
 def generate_analytics_plots(b_area, v_area, r_area, w_area):
