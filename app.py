@@ -254,10 +254,9 @@ def create_composite_export(img_before, img_after, mask):
     os.makedirs("geospatial_outputs", exist_ok=True)
     composite_path = "geospatial_outputs/satellite_change_map.png"
     
-    b_r = cv2.resize(img_before, (256, 256))
-    a_r = cv2.resize(img_after, (256, 256))
-    m_r = cv2.resize(mask, (256, 256))
-    
+    b_r = cv2.resize(img_before, (128, 128))
+    a_r = cv2.resize(img_after, (128, 128))
+    m_r = cv2.resize(mask, (128, 128))
     composite = np.hstack((b_r, a_r, m_r))
     cv2.imwrite(composite_path, cv2.cvtColor(composite, cv2.COLOR_RGB2BGR))
     return composite_path
@@ -440,4 +439,3 @@ if __name__ == "__main__":
     theme=gr.themes.Base(),
     css=custom_css
 )
-    
