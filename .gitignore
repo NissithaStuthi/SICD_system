@@ -1,0 +1,8 @@
+﻿*.pth
+*.tif
+__pycache__/
+checkpoints/
+checkpoints_module10/
+ckpt_full/
+ckpt_multi/
+data/

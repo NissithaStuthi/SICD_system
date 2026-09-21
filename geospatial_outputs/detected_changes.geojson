@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "detected_changes",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "class": "Building Change", "area_sq_m": 1081.5322847334212 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 77.59495, 12.97125 ], [ 77.59495, 12.97095 ], [ 77.59525, 12.97095 ], [ 77.59525, 12.97125 ], [ 77.59495, 12.97125 ] ] ] } },
+{ "type": "Feature", "properties": { "class": "Vegetation Change", "area_sq_m": 721.0229519943847 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 77.59535, 12.97085 ], [ 77.59535, 12.97065 ], [ 77.59565, 12.97065 ], [ 77.59565, 12.97085 ], [ 77.59535, 12.97085 ] ] ] } }
+]
+}
